@@ -129,7 +129,7 @@ if "evaluation_results" not in st.session_state:
                     client = Groq(api_key=GROQ_API_KEY)
                     # Usando o Llama 3.3 70B Versatile (Melhor modelo gratuito da Groq para raciocínio complexo)
                     completion = client.chat.completions.create(
-                        model="llama-3.3-70b-versatile",
+                        model="llama-3.3-70b-specdec",
                         messages=[
                             {"role": "system", "content": SYSTEM_PROMPT},
                             {"role": "user", "content": f"Please evaluate this application form text:\n\n{raw_form}"}
